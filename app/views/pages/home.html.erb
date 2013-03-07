@@ -1,4 +1,13 @@
+ <% if user_signed_in? %>
 
+		<div class="hero-unit">
+			<h1>Welcome home.</h1>
+
+			<p class="lead">
+				You've made it to the homepage!
+			</p>
+
+ <% else %>
 		
 		<div class="hero-unit">
 			<h1>Say what? You've never seen a site like this.</h1>
@@ -10,11 +19,11 @@
 			</p>
 
 			<p>
-				<%= link_to "Sign up", "#", class: "btn btn-inverse btn-large" %>  for glittering prizes!
+				<%= link_to "Sign up", new_user_registration_path, class: "btn btn-inverse btn-large" %>  for glittering prizes!
 			</p>
 
 		</div>
 
-
+<% end %>
 
 
